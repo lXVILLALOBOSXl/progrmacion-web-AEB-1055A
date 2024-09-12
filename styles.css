@@ -96,11 +96,10 @@ a:hover {
     }
 
     .side-panel {
-        border-left: none;
-        border-top: 2px solid #3498db;
         padding-left: 0;
         padding-top: 20px;
-        margin-top: 20px;
+        border-left: none;
+        border-top: 2px solid #3498db;
     }
 
     .main-content {
@@ -147,6 +146,183 @@ a:hover {
     color: #f39c12;
 }
 
+.dark-mode .container {
+    background-color: #444; 
+    border-color: #666; 
+    color: #f4f4f4; 
+}
+
+.dark-mode .side-panel {
+    background-color: #444; 
+    border-color: #666;
+}
+
+.dark-mode .main-content {
+    background-color: #555; 
+    color: #f4f4f4; 
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 {
+    color: #f39c12; 
+}
+
+.dark-mode p {
+    color: #f4f4f4; 
+}
+
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px; 
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin: 10px 0; 
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.dark-mode button {
+    background-color: #f39c12;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode button:hover {
+    background-color: #d35400;
+    transform: translateY(-2px); 
+}
+
+@media (max-width: 800px) {
+    button {
+        width: 100%; 
+        text-align: center;
+    }
+}
+
+
+.dark-mode h2 {
+    border-bottom: 2px solid #f39c12; 
+    color: #f39c12; 
+}
+
+
+.project {
+    display: none;
+}
+
+.project.active {
+    display: block;
+}
+
+#nextProject, #prevProject, #toggleModeButton, #contactForm button {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+#toggleModeButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#contactForm {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#contactForm label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333; 
+}
+
+#contactForm input, #contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff; 
+    color: #333; 
+}
+
+#contactForm textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#contactForm button {
+    width: 100%;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 30px; 
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm button:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px); 
+}
+
+.dark-mode #contactForm {
+    background-color: #444; 
+    box-shadow: none; 
+}
+
+.dark-mode #contactForm label {
+    color: #f4f4f4;
+}
+
+.dark-mode #contactForm input, .dark-mode #contactForm textarea {
+    background-color: #555; 
+    border: 1px solid #666; 
+    color: #f4f4f4; 
+}
+
+.dark-mode #contactForm button {
+    background-color: #f39c12; 
+    color: #333;
+}
+
+.dark-mode #contactForm button:hover {
+    background-color: #d35400;
+    transform: translateY(-2px); 
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .project img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
 .progress-container {
     background-color: #f4f4f4;
     border-radius: 8px;
@@ -160,4 +336,12 @@ a:hover {
     background-color: #3498db;
     width: 0;
     transition: width 1s ease-out;
+}
+
+.dark-mode .progress-container {
+    background-color: #3f3d3d; 
+}
+
+.dark-mode .progress-bar {
+    background-color: #f39c12; 
 }

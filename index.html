@@ -12,12 +12,11 @@
             <div class="profile">
                 <img src="./image.png" alt="Profile Picture">
                 <h1>Luis Adrian Villalobos Rivera</h1>
-                <h3>Systems Engineer student</h3>
+                <h3>Systems Engineer Student</h3>
             </div>
             <div class="content-section">
                 <h2>Profile</h2>
-                <p>Dedicated, hardworking, and committed to becoming a dependable and valuable
-                team member. Bringing forth a motivated attitude and a variety of powerful skills.</p>
+                <p></p>
             </div>
             <div class="content-section">
                 <h2>Skills</h2>
@@ -29,34 +28,110 @@
                     <li>
                         <h4>Java</h4>
                         <p>Swing, JavaFX, JDBC, Spring, Android App Development.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-skill-level="70%"></div>
+                        </div>
                     </li>
                     <li>
                         <h4>Python</h4>
                         <p>Flask, Jinja, SQLAlchemy, Selenium, Beautiful Soup, Tkinter, NumPy, Pandas, Matplotlib, Seaborn,
                             Tensorflow, Jupyter Notebooks.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-skill-level="90%"></div>
+                        </div>
                     </li>
                     <li>
                         <h4>C#</h4>
                         <p>ASP.NET, LINQ, Entity Framework.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-skill-level="60%"></div>
+                        </div>
                     </li>
                     <li>
                         <h4>SQL</h4>
                         <p>MySQL, SQLite, SQLServer.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-skill-level="90%"></div>
+                        </div>
                     </li>
                     <li>
                         <h4>Version Control</h4>
                         <p>Git, GitHub.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-skill-level="60%"></div>
+                        </div>
                     </li>
                     <li>
                         <h4>API RESTful</h4>
                         <p>Consume and create.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-skill-level="90%"></div>
+                        </div>
                     </li>
                     <li>
                         <h4>More</h4>
                         <p>Bootstrap, Data Structures, Algorithms, Unix Command Line, Oriented Agent Programming.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-skill-level="60%"></div>
+                        </div>
                     </li>
                 </ul>
             </div>
+            <div class="content-section">
+                <h2>Portfolio</h2>
+                <div class="project active">
+                    <h4>Inventory Android Application</h4>
+                    <p>Application for inventory management from a smartphone. Allows you to create, edit, delete, and view products. Developed with Java and MySQL.</p>
+                    <img src="./projects/inventory.png" alt="Inventory Android Application Screenshot" class="project-image">
+                    <a href="https://github.com/lXVILLALOBOSXl/inventory.git">GitHub Repository</a>
+                </div>
+                <div class="project">
+                    <h4>School Permits Web Application</h4>
+                    <p>Web Application for managing work permits that allows you to create, edit, delete, and view items. Developed with C# and MySQL.</p>
+                    <img src="./projects/permissions.png" alt="School Permits Web Application Screenshot" class="project-image">
+                    <a href="https://github.com/lXVILLALOBOSXl/schoolpermits.git">GitHub Repository</a>
+                </div>
+                <div class="project">
+                    <h4>Frontend Web Pages</h4>
+                    <p>Frontend WebPages developed with HTML 5, CSS 3 and JavaScript.</p>
+                    <img src="./projects/webpage.png" alt="Frontend Web Pages Screenshot" class="project-image">
+                    <a href="https://villalobostore.netlify.app/">Villalobos Store</a><br>
+                    <a href="https://villaloboscafe.netlify.app/">Villalobos Cafe</a><br>
+                    <a href="https://covidblog.netlify.app/">COVID Blog</a><br>
+                    <a href="https://villalobosfestival.netlify.app/">Villalobos Festival</a>
+                </div>
+                <div class="project">
+                    <h4>Payment API</h4>
+                    <p>API to request collections and refunds. Developed with PHP and MySQL.</p>
+                    <img src="./projects/api.jpg" alt="Payment API Screenshot" class="project-image">
+                    <a href="https://github.com/lXVILLALOBOSXl/paymentapi">GitHub Repository</a>
+                </div>
+                <div class="project">
+                    <h4>Restaurant Manager</h4>
+                    <p>CRM for the management of a restaurant. It was developed with Java, JavaFX, MySQL, React Native, PHP, WordPress, HTML5.</p>
+                    <img src="./projects/restaurant.png" alt="Restaurant Manager Screenshot" class="project-image">
+                    <a href="https://github.com/lXVILLALOBOSXl/daltys">GitHub Repository</a><br>
+                    <a href="https://www.facebook.com/daltysfood/">Facebook Page</a>
+                </div>
+                <div class="project">
+                    <h4>University’s Work</h4>
+                    <p>All the programs that I’ve developed through the subjects in the university.</p>
+                    <a href="https://github.com/lXVILLALOBOSXl/TECMM">GitHub Repository</a>
+                </div>
+                <div class="project">
+                    <h4>Microsoft Machine Learning Challenge</h4>
+                    <p>All the programs that I developed through Microsoft Machine Learning Challenge.</p>
+                    <a href="https://github.com/lXVILLALOBOSXl/microsoft-ml-challenge">GitHub Repository</a>
+                </div>
+                <div class="project">
+                    <h4>The Complete Python Pro Bootcamp</h4>
+                    <p>All the programs that I developed through The Complete Python Pro Bootcamp.</p>
+                    <img src="./projects/bootcamp.png" alt="The Complete Python Pro Bootcamp Screenshot" class="project-image">
+                    <a href="https://github.com/lXVILLALOBOSXl/pythonbootcamp">GitHub Repository</a>
+                </div>
+                <button id="prevProject">Previous</button>
+                <button id="nextProject">Next</button>
+            </div>     
             <div class="content-section">
                 <h2>Courses</h2>
                 <ul>
@@ -105,85 +180,7 @@
                         <p>June 2022</p>
                     </li>
                 </ul>
-            </div>
-            <div class="content-section">
-                <h2>Portfolio</h2>
-                <ul>
-                    <li>
-                        <h4>Inventory Android Application</h4>
-                        <p>Application for inventory management from a smartphone. Allows you to create, edit, delete, and view products. Developed with Java and MySQL.</p>
-                        <a href="https://github.com/lXVILLALOBOSXl/inventory.git">GitHub Repository</a>
-                    </li>
-                    <li>
-                        <h4>School Permits Web Application</h4>
-                        <p>Web Application for managing work permits that allows you to create, edit, delete, and view items. Developed with C# and MySQL.</p>
-                        <a href="https://github.com/lXVILLALOBOSXl/schoolpermits.git">GitHub Repository</a>
-                    </li>
-                    <li>
-                        <h4>Frontend Web Pages</h4>
-                        <p>Frontend WebPages developed with HTML 5, CSS 3 and JavaScript.</p>
-                        <a href="https://villalobostore.netlify.app/">Villalobos Store</a><br>
-                        <a href="https://villaloboscafe.netlify.app/">Villalobos Cafe</a><br>
-                        <a href="https://covidblog.netlify.app/">COVID Blog</a><br>
-                        <a href="https://villalobosfestival.netlify.app/">Villalobos Festival</a>
-                    </li>
-                    <li>
-                        <h4>Payment API</h4>
-                        <p>API to request collections and refunds. Developed with PHP and MySQL.</p>
-                        <a href="https://github.com/lXVILLALOBOSXl/paymentapi">GitHub Repository</a>
-                    </li>
-                    <li>
-                        <h4>Restaurant Manager</h4>
-                        <p>CRM for the management of a restaurant. It was developed with Java, JavaFX, MySQL, React Native, PHP, WordPress, HTML5.</p>
-                        <a href="https://github.com/lXVILLALOBOSXl/daltys">GitHub Repository</a><br>
-                        <a href="https://www.facebook.com/daltysfood/">Facebook Page</a>
-                    </li>
-                    <li>
-                        <h4>University’s Work</h4>
-                        <p>All the programs that I’ve developed through the subjects in the university.</p>
-                        <a href="https://github.com/lXVILLALOBOSXl/TECMM">GitHub Repository</a>
-                    </li>
-                    <li>
-                        <h4>Microsoft Machine Learning Challenge</h4>
-                        <p>All the programs that I developed through Microsoft Machine Learning Challenge.</p>
-                        <a href="https://github.com/lXVILLALOBOSXl/microsoft-ml-challenge">GitHub Repository</a>
-                    </li>
-                    <li>
-                        <h4>The Complete Python Pro Bootcamp</h4>
-                        <p>All the programs that I developed through The Complete Python Pro Bootcamp.</p>
-                        <a href="https://github.com/lXVILLALOBOSXl/pythonbootcamp">GitHub Repository</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="content-section">
-                <h2>References</h2>
-                <p>Angel Emmanuel Brambila Santamaria</p>
-                <a href="https://github.com/AngelBrambila91">GitHub</a>
-                <p>(Number upon request)</p>
-            </div>
-            <div class="content-section">
-                <h2>Skills</h2>
-                <ul>
-                    <li>
-                        <h4>Java</h4>
-                        <div class="progress-container">
-                            <div class="progress-bar" data-skill-level="90%"></div>
-                        </div>
-                    </li>
-                    <!-- Repite para otras habilidades -->
-                </ul>
-            </div> 
-            <div class="content-section">
-                <h2>Portfolio</h2>
-                <div class="project active">
-                    <h4>Inventory Android Application</h4>
-                    <p>Application for inventory management from a smartphone. Allows you to create, edit, delete, and view products.</p>
-                    <a href="https://github.com/lXVILLALOBOSXl/inventory.git">GitHub Repository</a>
-                </div>
-                <!-- Añade otros proyectos aquí -->
-                <button id="prevProject">Previous</button>
-                <button id="nextProject">Next</button>
-            </div>               
+            </div>          
             <div class="content-section">
                 <h2>Contact</h2>
                 <form id="contactForm">
@@ -193,6 +190,12 @@
                     <textarea id="message" name="message"></textarea><br><br>
                     <button type="submit">Send Message</button>
                 </form>
+            </div>
+            <div class="content-section">
+                <h2>References</h2>
+                <p>Angel Emmanuel Brambila Santamaria</p>
+                <a href="https://github.com/AngelBrambila91">GitHub</a>
+                <p>(Number upon request)</p>
             </div>
         </div>   
         <div class="side-panel">
@@ -228,19 +231,17 @@
     </div>
 </body>
 <script>
-    // Modo Oscuro / Modo Claro
     const toggleModeButton = document.createElement('button');
-    toggleModeButton.innerText = 'Toggle Dark/Light Mode';
+    toggleModeButton.innerText = '🌜/🌚';
     toggleModeButton.style.position = 'fixed';
     toggleModeButton.style.bottom = '20px';
     toggleModeButton.style.right = '20px';
     document.body.appendChild(toggleModeButton);
-    
+
     toggleModeButton.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
     });
     
-    // Sección de Habilidades Interactiva - Barras de Progreso
     window.addEventListener('scroll', () => {
         const skillsSection = document.querySelector('.content-section ul');
         const progressBars = document.querySelectorAll('.progress-bar');
@@ -253,7 +254,6 @@
         }
     });
     
-    // Efecto de Escritura para la Introducción
     const introductionText = "Dedicated, hardworking, and committed to becoming a dependable and valuable team member.";
     let currentIndex = 0;
     const introParagraph = document.querySelector('.content-section p');
@@ -262,12 +262,11 @@
         if (currentIndex < introductionText.length) {
             introParagraph.textContent += introductionText.charAt(currentIndex);
             currentIndex++;
-            setTimeout(typeWriterEffect, 100); // Velocidad de escritura
+            setTimeout(typeWriterEffect, 100); 
         }
     }
     window.onload = typeWriterEffect;
     
-    // Formulario de Contacto con Validación
     document.querySelector('#contactForm').addEventListener('submit', function (e) {
         const email = document.querySelector('#email');
         const message = document.querySelector('#message');
@@ -283,7 +282,6 @@
         }
     });
     
-    // Galería de Proyectos - Carrusel simple
     let currentProjectIndex = 0;
     const projects = document.querySelectorAll('.project');
     document.querySelector('#nextProject').addEventListener('click', () => {
@@ -296,5 +294,24 @@
         currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
         projects[currentProjectIndex].classList.add('active');
     });
+
+    function moveSidePanel() {
+        const sidePanel = document.querySelector('.side-panel');
+        const profileSection = document.querySelector('.profile');
+        
+        if (window.innerWidth <= 800) {
+            if (!profileSection.nextElementSibling.classList.contains('side-panel')) {
+                profileSection.after(sidePanel);
+            }
+        } else {
+            const container = document.querySelector('.container');
+            if (!container.lastElementChild.classList.contains('side-panel')) {
+                container.appendChild(sidePanel);
+            }
+        }
+    }
+
+    window.addEventListener('load', moveSidePanel);
+    window.addEventListener('resize', moveSidePanel);
     </script>    
 </html>
