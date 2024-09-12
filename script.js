@@ -1,8 +1,6 @@
 const toggleModeButton = document.createElement('button');
 toggleModeButton.innerText = '🌜/🌚';
-toggleModeButton.style.position = 'fixed';
-toggleModeButton.style.bottom = '20px';
-toggleModeButton.style.right = '20px';
+toggleModeButton.id = 'toggleModeButton';
 document.body.appendChild(toggleModeButton);
 
 toggleModeButton.addEventListener('click', () => {
