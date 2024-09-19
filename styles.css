@@ -345,3 +345,8 @@ button:hover {
 .dark-mode .progress-bar {
     background-color: #f39c12; 
 }
+
+.question {
+    margin-bottom: 20px;
+}
+

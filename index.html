@@ -3,232 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Villalobos</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sort Algorithms Trivia</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="main-content">
-            <div class="profile">
-                <img src="./image.png" alt="Profile Picture">
-                <h1>Luis Adrian Villalobos Rivera</h1>
-                <h3>Systems Engineer Student</h3>
+        <h1>Sort Algorithms Trivia Puzzle</h1>
+        <p>Match the sort algorithm with its description.</p>
+        
+        <div class="quiz">
+            <div class="question">
+                <h3>Question 1:</h3>
+                <p>Which sorting algorithm divides the input array into two halves, recursively sorts them, and then merges the sorted halves?</p>
+                <select id="question1">
+                    <option value="" disabled selected>Select an answer</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="quick">Quick Sort</option>
+                </select>
             </div>
-            <div class="content-section">
-                <h2>Profile</h2>
-                <p></p>
+            
+            <div class="question">
+                <h3>Question 2:</h3>
+                <p>Which sorting algorithm repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order?</p>
+                <select id="question2">
+                    <option value="" disabled selected>Select an answer</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="quick">Quick Sort</option>
+                </select>
             </div>
-            <div class="content-section">
-                <h2>Skills</h2>
-                <ul>
-                    <li>
-                        <h4>Soft skills</h4>
-                        <p>Focus, communication, teamwork, time management, responsibility, problem solving.</p>
-                    </li>
-                    <li>
-                        <h4>Java</h4>
-                        <p>Swing, JavaFX, JDBC, Spring, Android App Development.</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" data-skill-level="70%"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <h4>Python</h4>
-                        <p>Flask, Jinja, SQLAlchemy, Selenium, Beautiful Soup, Tkinter, NumPy, Pandas, Matplotlib, Seaborn,
-                            Tensorflow, Jupyter Notebooks.</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" data-skill-level="90%"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <h4>C#</h4>
-                        <p>ASP.NET, LINQ, Entity Framework.</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" data-skill-level="60%"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <h4>SQL</h4>
-                        <p>MySQL, SQLite, SQLServer.</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" data-skill-level="90%"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <h4>Version Control</h4>
-                        <p>Git, GitHub.</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" data-skill-level="60%"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <h4>API RESTful</h4>
-                        <p>Consume and create.</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" data-skill-level="90%"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <h4>More</h4>
-                        <p>Bootstrap, Data Structures, Algorithms, Unix Command Line, Oriented Agent Programming.</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" data-skill-level="60%"></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="content-section">
-                <h2>Portfolio</h2>
-                <div class="project active">
-                    <h4>Inventory Android Application</h4>
-                    <p>Application for inventory management from a smartphone. Allows you to create, edit, delete, and view products. Developed with Java and MySQL.</p>
-                    <img src="./projects/inventory.png" alt="Inventory Android Application Screenshot" class="project-image">
-                    <a href="https://github.com/lXVILLALOBOSXl/inventory.git">GitHub Repository</a>
-                </div>
-                <div class="project">
-                    <h4>School Permits Web Application</h4>
-                    <p>Web Application for managing work permits that allows you to create, edit, delete, and view items. Developed with C# and MySQL.</p>
-                    <img src="./projects/permissions.png" alt="School Permits Web Application Screenshot" class="project-image">
-                    <a href="https://github.com/lXVILLALOBOSXl/schoolpermits.git">GitHub Repository</a>
-                </div>
-                <div class="project">
-                    <h4>Frontend Web Pages</h4>
-                    <p>Frontend WebPages developed with HTML 5, CSS 3 and JavaScript.</p>
-                    <img src="./projects/webpage.png" alt="Frontend Web Pages Screenshot" class="project-image">
-                    <a href="https://villalobostore.netlify.app/">Villalobos Store</a><br>
-                    <a href="https://villaloboscafe.netlify.app/">Villalobos Cafe</a><br>
-                    <a href="https://covidblog.netlify.app/">COVID Blog</a><br>
-                    <a href="https://villalobosfestival.netlify.app/">Villalobos Festival</a>
-                </div>
-                <div class="project">
-                    <h4>Payment API</h4>
-                    <p>API to request collections and refunds. Developed with PHP and MySQL.</p>
-                    <img src="./projects/api.jpg" alt="Payment API Screenshot" class="project-image">
-                    <a href="https://github.com/lXVILLALOBOSXl/paymentapi">GitHub Repository</a>
-                </div>
-                <div class="project">
-                    <h4>Restaurant Manager</h4>
-                    <p>CRM for the management of a restaurant. It was developed with Java, JavaFX, MySQL, React Native, PHP, WordPress, HTML5.</p>
-                    <img src="./projects/restaurant.png" alt="Restaurant Manager Screenshot" class="project-image">
-                    <a href="https://github.com/lXVILLALOBOSXl/daltys">GitHub Repository</a><br>
-                    <a href="https://www.facebook.com/daltysfood/">Facebook Page</a>
-                </div>
-                <div class="project">
-                    <h4>University’s Work</h4>
-                    <p>All the programs that I’ve developed through the subjects in the university.</p>
-                    <a href="https://github.com/lXVILLALOBOSXl/TECMM">GitHub Repository</a>
-                </div>
-                <div class="project">
-                    <h4>Microsoft Machine Learning Challenge</h4>
-                    <p>All the programs that I developed through Microsoft Machine Learning Challenge.</p>
-                    <a href="https://github.com/lXVILLALOBOSXl/microsoft-ml-challenge">GitHub Repository</a>
-                </div>
-                <div class="project">
-                    <h4>The Complete Python Pro Bootcamp</h4>
-                    <p>All the programs that I developed through The Complete Python Pro Bootcamp.</p>
-                    <img src="./projects/bootcamp.png" alt="The Complete Python Pro Bootcamp Screenshot" class="project-image">
-                    <a href="https://github.com/lXVILLALOBOSXl/pythonbootcamp">GitHub Repository</a>
-                </div>
-                <button id="prevProject">Previous</button>
-                <button id="nextProject">Next</button>
-            </div>     
-            <div class="content-section">
-                <h2>Courses</h2>
-                <ul>
-                    <li>
-                        <h4>100 Days of Code: The Complete Python Pro Bootcamp</h4>
-                        <p>May 2024</p>
-                    </li>
-                    <li>
-                        <h4>Machine Learning Challenge, Microsoft</h4>
-                        <p>December 2023</p>
-                    </li>
-                    <li>
-                        <h4>Databases, Meta</h4>
-                        <p>January 2023</p>
-                    </li>
-                    <li>
-                        <h4>Data Structures and Algorithms: Deep Dive Using Java, Udemy</h4>
-                        <p>December 2023</p>
-                    </li>
-                    <li>
-                        <h4>Data Science with Jupyter Notebooks and Anaconda, Platzi</h4>
-                        <p>August 2023</p>
-                    </li>
-                    <li>
-                        <h4>Introduction to Terminal and CLI, Platzi</h4>
-                        <p>August 2023</p>
-                    </li>
-                    <li>
-                        <h4>Profesional Git Y Github, Platzi</h4>
-                        <p>August 2023</p>
-                    </li>
-                    <li>
-                        <h4>Python Basics, Platzi</h4>
-                        <p>June 2023</p>
-                    </li>
-                    <li>
-                        <h4>Java FX, Udemy</h4>
-                        <p>September 2022</p>
-                    </li>
-                    <li>
-                        <h4>Desarrollo web Completo, Udemy</h4>
-                        <p>July 2022</p>
-                    </li>
-                    <li>
-                        <h4>Universidad Java, Udemy</h4>
-                        <p>June 2022</p>
-                    </li>
-                </ul>
-            </div>          
-            <div class="content-section">
-                <h2>Contact</h2>
-                <form id="contactForm">
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email"><br><br>
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message"></textarea><br><br>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-            <div class="content-section">
-                <h2>References</h2>
-                <p>Angel Emmanuel Brambila Santamaria</p>
-                <a href="https://github.com/AngelBrambila91">GitHub</a>
-                <p>(Number upon request)</p>
-            </div>
-        </div>   
-        <div class="side-panel">
-            <div class="panel-section">
-                <h2>Details</h2>
-                <p>Zapopan, Jalisco, +52 (33) 1350 6904</p>
-                <a href="mailto:ivillalobosrivera@yahoo.com">ivillalobosrivera@yahoo.com</a>
-            </div>
-            <div class="panel-section">
-                <h2>Links</h2>
-                <ul>
-                    <li><a href="Linkedin">Linkedin</a></li>
-                    <li><a href="https://github.com/lXVILLALOBOSXl">GitHub</a></li>
-                    <li><a href="Netlify">Netlify</a></li>
-                </ul>
-            </div>
-            <div class="panel-section">
-                <h2>Education</h2>
-                <p>Bachelor’s degree in software development Technologist, Centro de Enseñanza Técnica Industrial</p>
-                <p>February 2018 — December 2021</p>
-                <p>Engineering degree in Computer Systems, Tecnológico Superior de Jalisco</p>
-                <p>January 2022 — May 2026 Expected</p>
-            </div>
-            <div class="panel-section">
-                <h2>Languages</h2>
-                <ul>
-                    <li><h4>Spanish</h4><p>Native</p></li>
-                    <li><h4>English</h4><p>Intermediate-Advanced</p></li>
-                </ul>
+
+            <div class="question">
+                <h3>Question 3:</h3>
+                <p>Which sorting algorithm selects a 'pivot' element and partitions the array into two sub-arrays of elements less than and greater than the pivot?</p>
+                <select id="question3">
+                    <option value="" disabled selected>Select an answer</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="quick">Quick Sort</option>
+                </select>
             </div>
         </div>
-        
+
+        <button onclick="checkAnswers()">Submit Answers</button>
     </div>
+
     <script src="./script.js"></script>
-</body> 
+</body>
 </html>
+
