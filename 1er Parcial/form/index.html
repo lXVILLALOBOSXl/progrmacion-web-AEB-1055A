@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Inscripción Escolar</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<div class="container">
+  <!-- Left side: School promotion with background image -->
+  <div class="promotion-container">
+    <h1>Bienvenidos a la Escuela Diosarrolladores</h1>
+    <p>En la Escuela Diosarrolladores, ofrecemos la mejor educación para tus hijos, con programas de enseñanza innovadores, infraestructura de primer nivel y actividades extracurriculares que fomentan el desarrollo integral.</p>
+    <h2>¿Por qué elegirnos?</h2>
+    <ul>
+      <li>Docentes altamente capacitados</li>
+      <li>Instalaciones modernas</li>
+      <li>Programas de becas</li>
+      <li>Actividades deportivas y culturales</li>
+    </ul>
+    <p>¡No pierdas la oportunidad de inscribir a tu hijo en la mejor escuela de la región!</p>
+  </div>
+
+  <!-- Right side: Form -->
+  <div class="form-container">
+    <form id="formulario">
+      <label for="nombre">Nombre completo: *</label>
+      <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="50">
+
+      <label for="email">Correo electrónico: *</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Contraseña: *</label>
+      <input type="password" id="password" name="password" required minlength="8" pattern="(?=.*\d)(?=.*[A-Z]).{8,}">
+
+      <label for="confirm_password">Confirmar contraseña: *</label>
+      <input type="password" id="confirm_password" name="confirm_password" required>
+
+      <label for="fecha_nacimiento">Fecha de nacimiento: *</label>
+      <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+      <label>Género: *</label>
+      <div class="radio-group">
+        <label><input type="radio" name="genero" value="Masculino" required> Masculino</label>
+        <label><input type="radio" name="genero" value="Femenino"> Femenino</label>
+      </div>
+
+      <label for="grado">Grado académico: *</label>
+      <select id="grado" name="grado" required>
+        <option value="" disabled selected>Seleccione su grado</option>
+        <option value="1">Primero</option>
+        <option value="2">Segundo</option>
+        <option value="3">Tercero</option>
+        <option value="4">Cuarto</option>
+        <option value="5">Quinto</option>
+        <option value="6">Sexto</option>
+      </select>
+
+      <label for="materias">Materias a inscribir: *</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="materias" value="Matemáticas" required> Matemáticas</label>
+        <label><input type="checkbox" name="materias" value="Ciencias"> Ciencias</label>
+        <label><input type="checkbox" name="materias" value="Historia"> Historia</label>
+        <label><input type="checkbox" name="materias" value="Geografía"> Geografía</label>
+        <label><input type="checkbox" name="materias" value="Lengua"> Lengua</label>
+      </div>
+
+      <label for="comprobante">Comprobante de pago: *</label>
+      <input type="file" id="comprobante" name="comprobante" required>
+
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpiar</button>
+
+      <div id="error-messages"></div>
+    </form>
+  </div>
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
+

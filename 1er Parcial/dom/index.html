@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica DOM</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Manipulación del DOM con JavaScript</h1>
+      <button id="changeColorBtn">Cambiar color de fondo</button>
+    </header>
+
+    <section>
+      <h2>Lista dinámica</h2>
+      <input type="text" id="itemInput" placeholder="Añadir un elemento">
+      <button id="addItemBtn">Agregar</button>
+      <ul id="itemList"></ul>
+    </section>
+
+    <section>
+      <h2>Contador</h2>
+      <div class="counter">
+        <button id="decrementBtn">-</button>
+        <span id="counterValue">0</span>
+        <button id="incrementBtn">+</button>
+      </div>
+      <div id="counterError" class="error"></div>
+    </section>
+
+    <section class="gallery">
+      <h2>Galería de Imágenes</h2>
+      <button id="prevBtn">Anterior</button>
+      <img id="galleryImage" src="./291268.jpg" alt="Imagen de la galería">
+      <button id="nextBtn">Siguiente</button>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
