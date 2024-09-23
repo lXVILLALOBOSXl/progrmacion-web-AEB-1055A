@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Búsqueda con Fetch API</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Búsqueda con Fetch API</h1>
+
+    <!-- Formulario de búsqueda -->
+    <form id="searchForm">
+      <input type="text" id="searchInput" placeholder="Buscar usuarios por nombre...">
+      <button type="submit" id="searchBtn">Buscar</button>
+    </form>
+
+    <!-- Resultados de la búsqueda -->
+    <ul id="resultsList"></ul>
+
+    <!-- Botón para cargar más -->
+    <div class="loading" id="loadingMessage" style="display: none;">Cargando...</div>
+    <button id="loadMoreBtn" style="display: none;">Cargar más</button>
+
+    <!-- Mensajes de error -->
+    <div class="error" id="errorMessage"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
