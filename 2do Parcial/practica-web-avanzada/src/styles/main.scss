@@ -1,4 +1,19 @@
 $primary-color: #3498db;
+$secondary-color: #e74c3c;
+
+@mixin button-styles($color) {
+    padding: 10px 15px;
+    background-color: $color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    
+    &:hover {
+        background-color: darken($color, 10%);
+    }
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -15,4 +30,12 @@ h1 {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    @include button-styles($primary-color);
+
+    &.decrement {
+        @include button-styles($secondary-color);
+    }
 }
