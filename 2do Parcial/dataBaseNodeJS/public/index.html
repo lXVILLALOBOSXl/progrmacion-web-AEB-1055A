@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; }
+        #listaLibros { list-style-type: none; padding: 0; }
+        #listaLibros li { background-color: #f0f0f0; margin-bottom: 10px; padding: 10px; border-radius: 5px; display: flex; justify-content: space-between; align-items: center; }
+        button { margin-left: 10px; }
+        .edit { background-color: #FFD700; }
+        .delete { background-color: #FF6347; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Biblioteca</h1>
+    <div>
+        <h3>Añadir un nuevo libro</h3>
+        <form id="formAgregar">
+            <input type="text" id="titulo" placeholder="Título" required>
+            <input type="text" id="autor" placeholder="Autor" required>
+            <input type="number" id="anio_publicacion" placeholder="Año de Publicación" required>
+            <button type="submit">Agregar Libro</button>
+        </form>
+    </div>
+
+    <!-- Formulario para editar libro -->
+    <div id="editFormContainer" class="hidden">
+        <h3>Editar libro</h3>
+        <form id="formEditar">
+            <input type="text" id="editTitulo" placeholder="Título" required>
+            <input type="text" id="editAutor" placeholder="Autor" required>
+            <input type="number" id="editAnioPublicacion" placeholder="Año de Publicación" required>
+            <button type="submit">Guardar Cambios</button>
+            <button type="button" onclick="cancelarEdicion()">Cancelar</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Buscar Libros</h3>
+        <input type="text" id="search" placeholder="Buscar por título o autor">
+        <button onclick="buscarLibros()">Buscar</button>
+    </div>
+
+    <ul id="listaLibros"></ul>
+
+    <script>
+        let libroIdEdicion = null;  // Variable global para almacenar el ID del libro que se está editando
+
+        // Cargar libros al iniciar
+        document.addEventListener('DOMContentLoaded', cargarLibros);
+
+        // Función para cargar libros
+        function cargarLibros() {
+            fetch('/libros')
+                .then(response => response.json())
+                .then(data => mostrarLibros(data))
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Mostrar libros en la lista
+        function mostrarLibros(data) {
+            const lista = document.getElementById('listaLibros');
+            lista.innerHTML = '';
+            data.forEach(libro => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    ${libro.titulo} - ${libro.autor} (${libro.anio_publicacion})
+                    <div>
+                        <button class="edit" onclick="editarLibro(${libro.id})">Editar</button>
+                        <button class="delete" onclick="eliminarLibro(${libro.id})">Eliminar</button>
+                    </div>`;
+                lista.appendChild(li);
+            });
+        }
+
+        // Función para agregar un nuevo libro
+        document.getElementById('formAgregar').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const titulo = document.getElementById('titulo').value;
+            const autor = document.getElementById('autor').value;
+            const anio_publicacion = document.getElementById('anio_publicacion').value;
+            fetch('/libros', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ titulo, autor, anio_publicacion })
+            })
+            .then(() => {
+                cargarLibros();
+                e.target.reset();
+            })
+            .catch(error => console.error('Error:', error));
+        });
+
+        // Función para eliminar un libro
+        function eliminarLibro(id) {
+            fetch(`/libros/${id}`, { method: 'DELETE' })
+                .then(() => cargarLibros())
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Función para buscar libros
+        function buscarLibros() {
+            const query = document.getElementById('search').value;
+            fetch(`/libros/buscar?q=${query}`)
+                .then(response => response.json())
+                .then(data => mostrarLibros(data))
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Función para editar un libro
+        function editarLibro(id) {
+            // Obtener datos del libro actual
+            fetch(`/libros/${id}`)
+                .then(response => response.json())
+                .then(libro => {
+                    libroIdEdicion = id; // Guardar ID globalmente
+                    document.getElementById('editTitulo').value = libro.titulo;
+                    document.getElementById('editAutor').value = libro.autor;
+                    document.getElementById('editAnioPublicacion').value = libro.anio_publicacion;
+                    document.getElementById('editFormContainer').classList.remove('hidden');
+                })
+                .catch(error => console.error('Error al obtener el libro:', error));
+        }
+
+        // Guardar cambios en el libro editado
+        document.getElementById('formEditar').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const titulo = document.getElementById('editTitulo').value;
+            const autor = document.getElementById('editAutor').value;
+            const anio_publicacion = document.getElementById('editAnioPublicacion').value;
+
+            fetch(`/libros/${libroIdEdicion}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ titulo, autor, anio_publicacion })
+            })
+            .then(() => {
+                cargarLibros();
+                cancelarEdicion();
+            })
+            .catch(error => console.error('Error al actualizar el libro:', error));
+        });
+
+        // Cancelar la edición y ocultar el formulario
+        function cancelarEdicion() {
+            document.getElementById('editFormContainer').classList.add('hidden');
+            libroIdEdicion = null;
+        }
+    </script>
+</body>
+</html>
