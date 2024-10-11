@@ -1,0 +1,31 @@
+<mat-card>
+    <h2>Gestor de Tareas</h2>
+  
+    <!-- Formulario para agregar nuevas tareas -->
+    <form (ngSubmit)="addTask()">
+      <mat-form-field appearance="fill">
+        <mat-label>Agregar Tarea</mat-label>
+        <input matInput [(ngModel)]="newTask" name="task" placeholder="Escribe una nueva tarea" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Agregar</button>
+    </form>
+  
+    <!-- Lista de Tareas Locales con la animación aplicada -->
+    <h3>Tareas Locales:</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let task of tasks$ | async" [@fadeInOut]>
+        <span>{{ task }}</span>
+        <button mat-icon-button color="warn" (click)="removeTask(task)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  
+    <!-- Lista de Tareas Externas con la animación aplicada -->
+    <h3>Tareas Externas:</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let task of externalTasks" [@fadeInOut]>
+        <span>{{ task.title }}</span>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>

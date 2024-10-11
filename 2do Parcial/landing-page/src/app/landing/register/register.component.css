@@ -1,0 +1,76 @@
+.register-form {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .register-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+    display: block;  /* Asegurarse de que el campo se muestre como bloque */
+  }
+  
+  .mat-mdc-form-field-wrapper {
+    display: flex;
+    flex-direction: column; /* Alinear elementos en columna */
+  }
+  
+  .mat-mdc-form-field-subscript-wrapper {
+    margin-top: 4px;  /* Espacio adicional para el mensaje de error */
+  }
+  
+  mat-error {
+    font-size: 12px;
+    color: #f44336;  /* Color de error */
+    margin-top: 4px;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+
+  .register-form {
+    width: 400px;  /* Asegurarse de que haya espacio suficiente */
+    overflow: visible;  /* Permitir que los elementos se expandan */
+  }
+
+  .register-form {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .register-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+    display: block;  /* Asegurar que cada campo ocupe toda la fila */
+  }
+  
+  button {
+    margin-top: 20px;
+    display: inline-block;  /* Asegurar que el botón sea visible */
+    width: 100%;  /* Ajustar el tamaño del botón */
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button:disabled {
+    background-color: #ccc;  /* Color para el botón deshabilitado */
+    cursor: not-allowed;
+  }

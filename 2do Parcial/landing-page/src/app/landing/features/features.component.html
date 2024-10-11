@@ -1,0 +1,8 @@
+<div class="features">
+    <div class="features">
+        <div class="feature-card" *ngFor="let feature of features" (click)="onSelectFeature(feature)" [appHighlight]="'lightgreen'">
+          <h3>{{ feature }}</h3>
+          <p>Descripción breve de {{ feature }}.</p>
+        </div>
+      </div>
+  </div>

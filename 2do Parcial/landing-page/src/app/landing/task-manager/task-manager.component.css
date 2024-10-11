@@ -1,0 +1,81 @@
+/* Estilo general del contenedor principal */
+mat-card {
+    max-width: 600px; /* Limitar el ancho máximo del contenedor */
+    margin: 20px auto; /* Centramos el contenedor en la página */
+    padding: 20px;     /* Agregar espacio interior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  /* Estilo del encabezado del formulario */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* Estilo para el formulario de agregar tarea */
+  form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  mat-form-field {
+    flex: 1;
+    margin-right: 10px; /* Separar el campo de entrada del botón */
+  }
+  
+  /* Botón de agregar tarea */
+  button[type="submit"] {
+    min-width: 120px;  /* Definir un tamaño mínimo para el botón */
+  }
+  
+  /* Lista de tareas */
+  mat-list {
+    background: #000000;    /* Fondo gris claro para las listas */
+    border-radius: 8px;     /* Bordes redondeados */
+    padding: 10px;          /* Espaciado interno */
+    margin: 10px 0;         /* Separar las listas entre sí */
+  }
+  
+  /* Elementos de las listas */
+  mat-list-item {
+    background: rgb(83, 82, 82);      /* Fondo blanco para resaltar los elementos */
+    margin-bottom: 5px;     /* Separar cada elemento */
+    border-radius: 5px;     /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex;          /* Alinear el texto y el botón en la misma línea */
+    justify-content: space-between;
+    align-items: center;    /* Centrar verticalmente */
+    padding: 10px;          /* Espaciado interno */
+    width: auto;            /* Ajustar el ancho automáticamente */
+    transition: transform 0.3s ease; /* Transición suave para hover */
+  }
+  
+  /* Animación de los elementos al pasar el cursor */
+  mat-list-item:hover {
+    transform: translateY(-3px); /* Mover el elemento ligeramente hacia arriba */
+  }
+  
+  /* Botón de eliminar tarea */
+  button[mat-icon-button] {
+    color: #e53935; /* Color rojo para el botón */
+    transition: color 0.3s ease; /* Transición suave */
+  }
+  
+  button[mat-icon-button]:hover {
+    color: #c62828; /* Color rojo más oscuro al pasar el cursor */
+  }
+  
+  /* Alinear las listas para que no se expandan */
+  mat-list-item span {
+    flex: 1; /* Permitir que el texto ocupe todo el espacio disponible */
+    word-break: break-word; /* Ajustar el texto para evitar que se desborde */
+  }
+  
+  /* Centrando el contenido de la lista de tareas */
+  mat-list {
+    max-width: 500px; /* Limitar el ancho máximo de la lista */
+    margin: 0 auto;   /* Centramos la lista dentro del contenedor */
+  }

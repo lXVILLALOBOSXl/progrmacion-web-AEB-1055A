@@ -1,0 +1,25 @@
+/* Estilos del banner */
+.banner {
+    text-align: center;
+    background: url('https://via.placeholder.com/1920x400') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+  }
+  
+  .banner h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .banner h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .banner input {
+    padding: 10px;
+    width: 60%;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+  }

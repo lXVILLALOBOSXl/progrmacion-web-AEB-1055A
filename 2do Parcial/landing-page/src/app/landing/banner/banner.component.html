@@ -1,0 +1,11 @@
+<div class="banner">
+    <h1 [style.color]="titleColor">{{ title }}</h1>
+    <h2 *ngIf="showSubtitle">{{ subtitle }}</h2> <!-- Uso de ngIf -->
+    <button (click)="showSubtitle = !showSubtitle">
+      {{ showSubtitle ? 'Ocultar Subtítulo' : 'Mostrar Subtítulo' }}
+    </button>
+    <button (click)="changeTitleColor()">Cambiar Color del Título</button>
+    <br><br>
+    <!-- Enlace Bidireccional con ngModel -->
+    <input [(ngModel)]="title" placeholder="Edita el título aquí">
+  </div>

@@ -1,0 +1,21 @@
+<mat-card>
+    <h2>{{ loginTitle$ | async }}</h2>
+    <form>
+      <mat-form-field appearance="fill">
+        <mat-label>{{ emailLabel$ | async }}</mat-label>
+        <input matInput type="email" placeholder="{{ emailLabel$ | async }}" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>{{ passwordLabel$ | async }}</mat-label>
+        <input matInput type="password" placeholder="{{ passwordLabel$ | async }}" />
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary">{{ submitButton$ | async }}</button>
+    </form>
+  
+    <div>
+      <button mat-button (click)="changeLanguage('es')">Español</button>
+      <button mat-button (click)="changeLanguage('en')">English</button>
+    </div>
+  </mat-card>
