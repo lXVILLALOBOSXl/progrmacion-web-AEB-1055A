@@ -79,30 +79,4 @@ function moveSidePanel() {
 window.addEventListener('load', moveSidePanel);
 window.addEventListener('resize', moveSidePanel);
 
-function checkAnswers() {
-    // Get the values of the selected answers
-    const q1 = document.getElementById('question1').value;
-    const q2 = document.getElementById('question2').value;
-    const q3 = document.getElementById('question3').value;
 
-    // Check if all questions are answered
-    if (!q1 || !q2 || !q3) {
-        alert('Please answer all the questions.');
-        return;
-    }
-
-    // Correct answers
-    const correctAnswers = {
-        question1: 'merge',
-        question2: 'bubble',
-        question3: 'quick'
-    };
-
-    // Validate answers
-    if (q1 === correctAnswers.question1 && q2 === correctAnswers.question2 && q3 === correctAnswers.question3) {
-        alert('Congratulations! You solved the puzzle.');
-        window.location.href = "cv.html";
-    } else {
-        alert('Some answers are incorrect. Try again!');
-    }
-}
